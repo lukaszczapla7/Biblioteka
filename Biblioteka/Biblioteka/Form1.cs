@@ -1,3 +1,4 @@
+using SqlLib;
 using System.Data;
 
 namespace Biblioteka
@@ -49,7 +50,7 @@ namespace Biblioteka
             {
                 MessageBox.Show("Niepoprawne dane klasy.", "B³¹d");
             }
-            else if(Imie.Text.Length == 0 || Nazwisko.Text.Length == 0 || Tytul.Text.Length == 0)
+            else if (Imie.Text.Length == 0 || Nazwisko.Text.Length == 0 || Nazwisko.Text.Length == 0)
             {
                 MessageBox.Show("Nie wprowadzono odpowiednich danych.", "B³¹d");
             }
@@ -63,11 +64,11 @@ namespace Biblioteka
                     txt.Write(Imie.Text + " ");
                     txt.Write(Nazwisko.Text + " ");
                     txt.Write("kl." + Klasa.Value + " - ");
-                    txt.Write("''" + Tytul.Text + "''");
+                    //txt.Write("''" + Tytul.Text + "''");
                     txt.Write(" Data rozp. rezerwacji: " + DataRezerwacji.Value.Date + "\n");
                 }
 
-                Imie.Clear(); Nazwisko.Clear(); Klasa.Value = 0; Tytul.Clear();   
+                //Imie.Clear(); Nazwisko.Clear(); Klasa.Value = 0; Tytul.Clear();
             }
         }
 
@@ -86,7 +87,18 @@ namespace Biblioteka
             ListaRezerwacji rezerwacje = new ListaRezerwacji();
             rezerwacje.Show();
         }
+
+        private void ListaKsiazek_Click(object sender, EventArgs e)
+        {
+            CdbSQL db = new CdbSQL();
+            string query = "SELECT id,tytul FROM ksiazki";
+            DataTable result = db.ExecuteQuery(query);
+            ListaKsiazek.DataSource = result;
+            ListaKsiazek.DisplayMember = "tytul";
+            ListaKsiazek.ValueMember = "id";
+        }
+        }
     }
 
 
-}
+

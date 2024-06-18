@@ -49,7 +49,6 @@
             label15 = new Label();
             label16 = new Label();
             panel1 = new Panel();
-            Tytul = new TextBox();
             label21 = new Label();
             Klasa = new NumericUpDown();
             label20 = new Label();
@@ -61,6 +60,7 @@
             label17 = new Label();
             button3 = new Button();
             Lista = new Button();
+            ListaKsiazek = new ComboBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Klasa).BeginInit();
@@ -326,7 +326,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(Tytul);
+            panel1.Controls.Add(ListaKsiazek);
             panel1.Controls.Add(label21);
             panel1.Controls.Add(Klasa);
             panel1.Controls.Add(label20);
@@ -340,14 +340,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(552, 366);
             panel1.TabIndex = 9;
-            // 
-            // Tytul
-            // 
-            Tytul.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            Tytul.Location = new Point(182, 224);
-            Tytul.Name = "Tytul";
-            Tytul.Size = new Size(275, 39);
-            Tytul.TabIndex = 19;
             // 
             // label21
             // 
@@ -378,10 +370,11 @@
             label20.ForeColor = SystemColors.WindowText;
             label20.Location = new Point(46, 293);
             label20.Name = "label20";
-            label20.Size = new Size(198, 32);
+            label20.Size = new Size(240, 32);
             label20.TabIndex = 16;
-            label20.Text = "Data rezerwacji:";
+            label20.Text = "Data wypożyczenia:";
             label20.TextAlign = ContentAlignment.MiddleCenter;
+            //label20.Click += ListaKsiazek_Click;
             // 
             // label19
             // 
@@ -399,10 +392,11 @@
             // DataRezerwacji
             // 
             DataRezerwacji.CalendarFont = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            DataRezerwacji.Cursor = Cursors.Hand;
             DataRezerwacji.Font = new Font("Segoe UI", 12F);
-            DataRezerwacji.Location = new Point(257, 296);
+            DataRezerwacji.Location = new Point(292, 293);
             DataRezerwacji.Name = "DataRezerwacji";
-            DataRezerwacji.Size = new Size(200, 29);
+            DataRezerwacji.Size = new Size(165, 29);
             DataRezerwacji.TabIndex = 14;
             DataRezerwacji.ValueChanged += dateTimePicker1_ValueChanged;
             // 
@@ -471,6 +465,15 @@
             Lista.UseVisualStyleBackColor = true;
             Lista.Click += Lista_Click;
             // 
+            // ListaKsiazek
+            // 
+            ListaKsiazek.FormattingEnabled = true;
+            ListaKsiazek.Location = new Point(182, 240);
+            ListaKsiazek.Name = "ListaKsiazek";
+            ListaKsiazek.Size = new Size(275, 23);
+            ListaKsiazek.TabIndex = 12;
+            ListaKsiazek.Click += ListaKsiazek_Click;
+            // 
             // Biblioteka
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -535,8 +538,8 @@
         private Label label19;
         private DateTimePicker DataRezerwacji;
         private NumericUpDown Klasa;
-        private TextBox Tytul;
         private Label label21;
         private Button Lista;
+        private ComboBox ListaKsiazek;
     }
 }
