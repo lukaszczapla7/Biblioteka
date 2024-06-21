@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\Łukasz\\Visual\\CHORZOW\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {}
+    "C:\\Users\\domin\\source\\backup\\BibliotekaStudia\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {}
   },
   "projects": {
-    "E:\\Users\\Łukasz\\Visual\\CHORZOW\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {
+    "C:\\Users\\domin\\source\\backup\\BibliotekaStudia\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\Łukasz\\Visual\\CHORZOW\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
+        "projectUniqueName": "C:\\Users\\domin\\source\\backup\\BibliotekaStudia\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
         "projectName": "Biblioteka",
-        "projectPath": "E:\\Users\\Łukasz\\Visual\\CHORZOW\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
-        "packagesPath": "C:\\Users\\lukih\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\Łukasz\\Visual\\CHORZOW\\Biblioteka\\Biblioteka\\obj\\",
+        "projectPath": "C:\\Users\\domin\\source\\backup\\BibliotekaStudia\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
+        "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\domin\\source\\backup\\BibliotekaStudia\\Biblioteka\\Biblioteka\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lukih\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,7 +27,11 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\domin\\source\\backup\\SqlLib\\SqlLib\\SqlLib.csproj": {
+                "projectPath": "C:\\Users\\domin\\source\\backup\\SqlLib\\SqlLib\\SqlLib.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -67,7 +67,77 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\domin\\source\\backup\\SqlLib\\SqlLib\\SqlLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\domin\\source\\backup\\SqlLib\\SqlLib\\SqlLib.csproj",
+        "projectName": "SqlLib",
+        "projectPath": "C:\\Users\\domin\\source\\backup\\SqlLib\\SqlLib\\SqlLib.csproj",
+        "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\domin\\source\\backup\\SqlLib\\SqlLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
